@@ -1,0 +1,108 @@
+/*CITY SELECTION Starts*/
+.dropdown-item {
+    display: flex;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--background-color);
+    padding: 1rem .5rem;
+    margin: .2rem;
+    border: var(--ct-border-width) solid var(--ct-border-color);
+    cursor: pointer;
+}
+.dropdown-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit
+}
+.dropdown-item:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit
+}
+.dropdown-item:hover {
+    background-color: var(--ct-tertiary-color);
+}
+.dropdown-item img {
+    margin-top: -0.25rem;
+    padding: .25rem;
+    height: 2rem;
+}
+ 
+@media (min-width:701px) {
+    .search-container input {
+        width: 30vw;
+        height: 5vh;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        padding-left: 30px;
+        background: url("https://cdn-icons-png.flaticon.com/512/622/622669.png") no-repeat left 10px center;
+        background-size: 18px;
+    }
+    .dropdown {
+        position: absolute;
+        margin-top: 3rem;
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--ct-border-radius);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 30vw;
+        z-index: 10;
+    }
+    .text-faded {
+        color: var(--ct-secondary-color)!important
+    }
+    
+}
+#countryFlag {
+    flex: 2;
+}
+#cityName {
+    flex: 4;
+}
+#countryName {
+    flex: 6;
+    justify-self: start;
+}
+@media (min-width:700px) and (max-width: 1020px) {
+    #countryFlag {
+        flex: 2;
+    }
+    #cityName {
+        flex: 4;
+    }
+    #countryName {
+        flex: 6;
+        justify-self: start;
+    }
+}
+@media (min-width:320px) and (max-width: 700px) {
+    .search-container input {
+        width: 50vw;
+        height: 5vh;
+        font-size: 1em;
+        background: url("https://cdn-icons-png.flaticon.com/512/622/622669.png") no-repeat left 5px center;
+        background-size: 10px;
+        padding-left: 18px;
+    }
+    .dropdown {
+        position: absolute;
+        margin-top: 3rem;
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--ct-border-radius);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 50vw;
+        z-index: 10;
+      }
+    #countryFlag {
+        flex: 2;
+    }
+    #cityName {
+        flex: 5;
+    }
+    #countryName {
+        flex: 5;
+        display:none;
+    }
+    .text-faded {
+        color: var(--ct-secondary-color)!important
+    }
+}

@@ -50,6 +50,6 @@ describe("Test fetchCities async calls", () => {
     const action = { type: fetchCities.rejected.type, error: { message: "Failed to fetch cities" } };
     const state = cityReducer(undefined, action);
     expect(state.status).toBe("failed");
-    expect(state.error).toBe("Failed to fetch cities");
+    expect(state.errorCity).toBe("Failed to fetch cities");
   });
 });

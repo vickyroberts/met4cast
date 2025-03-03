@@ -17,6 +17,7 @@ export const CitySelector = () => {
   const dispatch = useDispatch();
   const { cityData } = useSelector((state) => state.cities);
 
+  // Set debounce to call city search api only after typing is complete.
   const handleKeyPress = useCallback((e) => {
     if (lastSearched.current) {
       clearTimeout(lastSearched.current);
@@ -33,6 +34,8 @@ export const CitySelector = () => {
     }
   };
 
+  /*When city is selected from the list, dispatch to save selected
+  and to fetch weather for the city*/
   const handleCitySelection = (city) => {
     dispatch(setSelectedCity(city));
     dispatch(fetchWeather({ lat: city.lat, long: city.long }));

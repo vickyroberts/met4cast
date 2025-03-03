@@ -42,7 +42,7 @@ const Container = () => {
         {(errorCity || error) && <div className="error">
             {t("landing_info")}
         </div>}
-        <div className="columns">
+        <div className={`columns ${!errorCity && !error && wthrData ? "columns-height" : ""}`}>
         {/* Display weather columns or no data component */}
           {!errorCity && !error && wthrData && wthrData.map((weather) => (
             <WeatherCol weather={weather}></WeatherCol>
